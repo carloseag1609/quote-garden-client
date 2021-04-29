@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote Generator</title>
+  <base href="/">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <img class="logo" src="./assets/logo.png" alt="Logo StacklyCode">
+  </header>
+
+  <section class="search">
+    <form class="form container" id="form-search">
+      <div class="form__group">
+        <input type="text" class="form__input" id="search">
+        <span class="material-icons form__icon">search</span>
+      </div>
+      <button class="button button--primary">Search</button>
+    </form>
+    <button class="button button--white button--random" id="random">
+      <span>Random</span>
+      <span class="material-icons">loop</span>
+    </button>
+  </section>
+
+  <main class="quotes container">
+    <h1 class="quotes__title" id="title">Random Quotes</h1>
+    <section class="cards">
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img class="logo" src="./assets/logo.png" alt="Logo StacklyCode">
+  </footer>
+
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

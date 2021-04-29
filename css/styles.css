@@ -1,0 +1,252 @@
+:root {
+    --light-gray: #FAFAFA;
+    --dark-blue: #172E5F;
+    --darker-blue: #152B5A;
+    --primary: #2770F1;
+    --secondary: #5C97FF;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 60%;
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 100;
+}
+
+
+.header, .footer {
+    width: 100%;
+    height: 8rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background-color: white;
+}
+
+.logo {
+    max-width: 20rem;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+}
+
+.search {
+    background-color: var(--light-gray);
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .search {
+        height: 20rem;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .form {
+        flex-direction: row;
+    }
+}
+
+.form__group {
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .form__group {
+        flex: 8;
+    }
+}
+
+.form__input {
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.05);
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.05);
+    color: var(--darker-blue);
+    cursor: pointer;
+    padding: 1rem 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .form__input {
+        padding: 1.5rem 1rem;
+    }
+}
+
+.form__input--error {
+    border: 1px solid red;
+}
+
+.form__icon {
+    color: var(--darker-blue);
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+    z-index: 100;
+}
+
+@media (min-width: 768px) {
+    .form__icon {
+        right: 3%
+    }
+}
+
+.form__icon--error {
+    color: red;
+}
+
+.button {
+    padding: 1rem 1rem;
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.05);
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.05);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    position: relative;
+}
+
+
+.button--random {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+@media (min-width: 768px) {
+    .button--random {
+        width: 15rem;
+    }
+}
+
+.button--primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .button--primary {
+        flex: 1;
+    }
+}
+
+.button--white {
+    color: var(--darker-blue);
+    background-color: #FFF;
+}
+
+.quotes__title {
+    text-align: center;
+    color: var(--darker-blue);
+    margin: 5rem 0;
+}
+
+.quotes__loading {
+    display: block;
+    color: var(--darker-blue);
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+@media (min-width: 480px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    padding: 3rem 3rem 5rem 3rem;
+}
+
+.card__header {
+    width: 100%;
+}
+
+.card__genre {
+    background-color: var(--secondary);
+    margin: 0 auto;
+    color: white;
+    width: 15rem;
+    overflow: hidden;
+    min-width: 10rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.card__quote {
+    color: var(--dark-blue);
+    text-align: center;
+    line-height: 1.3;
+}
